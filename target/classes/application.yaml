@@ -1,0 +1,9 @@
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/labjavajpa_db
+        username: root
+        password: 170984St
+jpa:
+    hibernate:
+        ddl-auto: create
+    show-sql: true
