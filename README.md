@@ -25,13 +25,13 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 
 For this homework assignment, you will be using the data from the airline database from lab 3.02 and the [Spring JPA Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation).
 
-You will be creating three main classes and an enum class: `FlightBooking`, `Customer` and `Flight`. The enum class will be called `CustomerStatus`.
+You will be creating three main classes and an enum class: `Model.FlightBooking`, `Model.Customer` and `Model.Flight`. The enum class will be called `Model.CustomerStatus`.
 
 <br>
 
-### `CustomerStatus` enum
+### `Model.CustomerStatus` enum
 
-Create an enum class called `CustomerStatus` with the following values:
+Create an enum class called `Model.CustomerStatus` with the following values:
 
 - `Gold`
 - `Silver`
@@ -39,54 +39,54 @@ Create an enum class called `CustomerStatus` with the following values:
 
 <br>
 
-### `Customer` class
+### `Model.Customer` class
 
-Create a class called `Customer` with the following variables:
+Create a class called `Model.Customer` with the following variables:
 
 - `customerId` (integer): an auto-generated unique identifier, private member
 - `customerName` (string): private member
 - `customerStatus` (string): representing an enum, private member
 - `totalCustomerMileage` (integer): private member
-- Add an empty constructor to the `Customer` class for Hibernate to create new instances of the class.
-- Add a parameterized constructor to the `Customer` class that takes `customerName`, `customerStatus` and `totalCustomerMileage` as parameters.
-- Add public getter and setter methods for each variable in the `Customer` class.
+- Add an empty constructor to the `Model.Customer` class for Hibernate to create new instances of the class.
+- Add a parameterized constructor to the `Model.Customer` class that takes `customerName`, `customerStatus` and `totalCustomerMileage` as parameters.
+- Add public getter and setter methods for each variable in the `Model.Customer` class.
 
 <br>
 
-### `Flight` class
+### `Model.Flight` class
 
-Create a class called `Flight` with the following variables:
+Create a class called `Model.Flight` with the following variables:
 
 - `flightId` (integer): an auto-generated unique identifier, private member
 - `flightNumber` (string): a unique identifier, private member
 - `aircraft` (string): private member
 - `totalAircraftSeats` (integer): private member
 - `flightMileage` (integer): private member
-- Add an empty constructor to the `Flight` class for Hibernate to create new instances of the class.
-- Add a parameterized constructor to the `Flight` class that takes `flightNumber`, `aircraft`, `totalAircraftSeats` and `flightMileage` as parameters.
-- Add public getter and setter methods for each variable in the `Flight` class.
+- Add an empty constructor to the `Model.Flight` class for Hibernate to create new instances of the class.
+- Add a parameterized constructor to the `Model.Flight` class that takes `flightNumber`, `aircraft`, `totalAircraftSeats` and `flightMileage` as parameters.
+- Add public getter and setter methods for each variable in the `Model.Flight` class.
 
 <br>
 
-### `FlightBooking` class
+### `Model.FlightBooking` class
 
-Create a class called `FlightBooking` with the following variables:
+Create a class called `Model.FlightBooking` with the following variables:
 
 - `bookingId` (integer): an auto-generated unique identifier, private member
 - `customerId` (integer): private member
 - `flightId` (integer): private member
-- Add an empty constructor to the `FlightBooking` class for Hibernate to create new instances of the class.
-- Add a parameterized constructor to the `FlightBooking` class that takes `customerId` and `flightId` as parameters.
-- Add public getter and setter methods for each variable in the `FlightBooking` class.
-- Add foreign key constraints in the `FlightBooking` class to reference the `customerId` and `flightId` in the `customers` and `flights` tables respectively.
+- Add an empty constructor to the `Model.FlightBooking` class for Hibernate to create new instances of the class.
+- Add a parameterized constructor to the `Model.FlightBooking` class that takes `customerId` and `flightId` as parameters.
+- Add public getter and setter methods for each variable in the `Model.FlightBooking` class.
+- Add foreign key constraints in the `Model.FlightBooking` class to reference the `customerId` and `flightId` in the `customers` and `flights` tables respectively.
 
 <br>
 
 ## Tasks
 
-1. Create all the necessary repositories and entities for the `Customer` table.
-2. Create all the necessary repositories and entities for the `Flight` table.
-3. Create all the necessary repositories and entities for the `FlightBooking` table.
+1. Create all the necessary repositories and entities for the `Model.Customer` table.
+2. Create all the necessary repositories and entities for the `Model.Flight` table.
+3. Create all the necessary repositories and entities for the `Model.FlightBooking` table.
 4. Write tests to verify your ability to create new customers.
 5. Write tests to verify your ability to create new flights.
 6. Write tests to verify your ability to find customers by name.
