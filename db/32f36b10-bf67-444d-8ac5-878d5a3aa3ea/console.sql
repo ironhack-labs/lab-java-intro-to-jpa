@@ -1,0 +1,1 @@
+CREATE DATABASE euro_cup_db;
