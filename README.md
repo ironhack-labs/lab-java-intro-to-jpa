@@ -25,13 +25,13 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 
 For this homework assignment, you will be using the data from the airline database from lab 3.02 and the [Spring JPA Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation).
 
-You will be creating three main classes and an enum class: `FlightBooking`, `Customer` and `Flight`. The enum class will be called `CustomerStatus`.
+You will be creating three main classes and an enum class: `com.example.demo.model.FlightBooking`, `com.example.demo.model.Customer` and `com.example.demo.model.Flight`. The enum class will be called `com.example.demo.model.CustomerStatus`.
 
 <br>
 
-### `CustomerStatus` enum
+### `com.example.demo.model.CustomerStatus` enum
 
-Create an enum class called `CustomerStatus` with the following values:
+Create an enum class called `com.example.demo.model.CustomerStatus` with the following values:
 
 - `Gold`
 - `Silver`
@@ -39,54 +39,54 @@ Create an enum class called `CustomerStatus` with the following values:
 
 <br>
 
-### `Customer` class
+### `com.example.demo.model.Customer` class
 
-Create a class called `Customer` with the following variables:
+Create a class called `com.example.demo.model.Customer` with the following variables:
 
 - `customerId` (integer): an auto-generated unique identifier, private member
 - `customerName` (string): private member
 - `customerStatus` (string): representing an enum, private member
 - `totalCustomerMileage` (integer): private member
-- Add an empty constructor to the `Customer` class for Hibernate to create new instances of the class.
-- Add a parameterized constructor to the `Customer` class that takes `customerName`, `customerStatus` and `totalCustomerMileage` as parameters.
-- Add public getter and setter methods for each variable in the `Customer` class.
+- Add an empty constructor to the `com.example.demo.model.Customer` class for Hibernate to create new instances of the class.
+- Add a parameterized constructor to the `com.example.demo.model.Customer` class that takes `customerName`, `customerStatus` and `totalCustomerMileage` as parameters.
+- Add public getter and setter methods for each variable in the `com.example.demo.model.Customer` class.
 
 <br>
 
-### `Flight` class
+### `com.example.demo.model.Flight` class
 
-Create a class called `Flight` with the following variables:
+Create a class called `com.example.demo.model.Flight` with the following variables:
 
 - `flightId` (integer): an auto-generated unique identifier, private member
 - `flightNumber` (string): a unique identifier, private member
 - `aircraft` (string): private member
 - `totalAircraftSeats` (integer): private member
 - `flightMileage` (integer): private member
-- Add an empty constructor to the `Flight` class for Hibernate to create new instances of the class.
-- Add a parameterized constructor to the `Flight` class that takes `flightNumber`, `aircraft`, `totalAircraftSeats` and `flightMileage` as parameters.
-- Add public getter and setter methods for each variable in the `Flight` class.
+- Add an empty constructor to the `com.example.demo.model.Flight` class for Hibernate to create new instances of the class.
+- Add a parameterized constructor to the `com.example.demo.model.Flight` class that takes `flightNumber`, `aircraft`, `totalAircraftSeats` and `flightMileage` as parameters.
+- Add public getter and setter methods for each variable in the `com.example.demo.model.Flight` class.
 
 <br>
 
-### `FlightBooking` class
+### `com.example.demo.model.FlightBooking` class
 
-Create a class called `FlightBooking` with the following variables:
+Create a class called `com.example.demo.model.FlightBooking` with the following variables:
 
 - `bookingId` (integer): an auto-generated unique identifier, private member
 - `customerId` (integer): private member
 - `flightId` (integer): private member
-- Add an empty constructor to the `FlightBooking` class for Hibernate to create new instances of the class.
-- Add a parameterized constructor to the `FlightBooking` class that takes `customerId` and `flightId` as parameters.
-- Add public getter and setter methods for each variable in the `FlightBooking` class.
-- Add foreign key constraints in the `FlightBooking` class to reference the `customerId` and `flightId` in the `customers` and `flights` tables respectively.
+- Add an empty constructor to the `com.example.demo.model.FlightBooking` class for Hibernate to create new instances of the class.
+- Add a parameterized constructor to the `com.example.demo.model.FlightBooking` class that takes `customerId` and `flightId` as parameters.
+- Add public getter and setter methods for each variable in the `com.example.demo.model.FlightBooking` class.
+- Add foreign key constraints in the `com.example.demo.model.FlightBooking` class to reference the `customerId` and `flightId` in the `customers` and `flights` tables respectively.
 
 <br>
 
 ## Tasks
 
-1. Create all the necessary repositories and entities for the `Customer` table.
-2. Create all the necessary repositories and entities for the `Flight` table.
-3. Create all the necessary repositories and entities for the `FlightBooking` table.
+1. Create all the necessary repositories and entities for the `com.example.demo.model.Customer` table.
+2. Create all the necessary repositories and entities for the `com.example.demo.model.Flight` table.
+3. Create all the necessary repositories and entities for the `com.example.demo.model.FlightBooking` table.
 4. Write tests to verify your ability to create new customers.
 5. Write tests to verify your ability to create new flights.
 6. Write tests to verify your ability to find customers by name.
